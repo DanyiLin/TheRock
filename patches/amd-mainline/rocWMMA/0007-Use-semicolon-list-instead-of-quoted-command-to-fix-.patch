@@ -6,7 +6,7 @@ Subject: [PATCH 7/7] Use semicolon list instead of quoted command to fix
 
 ---
  test/gemm/CMakeLists.txt | 5 +++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ 1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/test/gemm/CMakeLists.txt b/test/gemm/CMakeLists.txt
 index 81f99984..319e35f3 100644
