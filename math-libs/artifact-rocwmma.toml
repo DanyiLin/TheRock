@@ -14,8 +14,8 @@ include = [
   "bin/perf_*",
   "bin/hipRTC_gemm",
   # Tests
-  "bin/*_test",
-  "bin/*-validate",
+  "bin/*_test*",
+  "bin/*-validate*",
   "bin/rocwmma/CTestTestfile.cmake",
   "bin/rocwmma/*/CTestTestfile.cmake",
 ]
