@@ -24,14 +24,15 @@ logging.basicConfig(level=logging.INFO)
 # Otherwise, we run the normal test suite
 test_type = os.getenv("TEST_TYPE", "full")
 
-## Only run regression test set for Windows or gfx11XX
-#if AMDGPU_FAMILIES.startswith("gfx11") or platform == "windows":
-#    test_type = "regression"
+# If there are devices for which the full set is too slow, we can
+# programatically set test_type to "regression" here.
 
 test_subdir = ""
 timeout = "3600"
 if test_type == "smoke":
-    test_subdir = "/smoke"
+    # The emulator regression tests are very fast.
+    # If we need something even faster we can use "/smoke" here.
+    test_subdir = "/regression"
     timeout = "300"
 elif test_type == "regression":
     test_subdir = "/regression"
